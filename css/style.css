@@ -54,8 +54,7 @@ body {
   max-width: 120rem;
   margin: 8rem auto;
   background-color: var(--grey-light-2);
-  box-shadow: var(--shadow-dark);
-  min-height: 100vh; }
+  box-shadow: var(--shadow-dark); }
 
 .header {
   font-size: 1.4rem;
@@ -77,7 +76,25 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  height: 80rem;
+  background-color: #fff;
+  flex: 1; }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--grey-light-1);
+  border-bottom: 1px solid var(--grey-light-2); }
+
+.description {
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  font-size: 1.4rem; }
+
+.user-review {
+  background-color: palegreen;
   flex: 1; }
 
 .logo {
@@ -277,3 +294,45 @@ body {
   100% {
     transform: scale(1);
     box-shadow: none; } }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem;
+  border-top: 1px solid var(--grey-light-2);
+  border-bottom: 1px solid var(--grey-light-2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem; }
+  .list__item::before {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.7rem;
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--grey-dark-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .recommend__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.5rem;
+      border: 3px solid #fff; }
